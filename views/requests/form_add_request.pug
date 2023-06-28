@@ -1,0 +1,74 @@
+extends ../layout
+
+block content
+      
+      div.display-flex-row
+        h4=title
+
+      form(id='form')
+        div.row
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="id_client") Cliente
+              select.form-select(name='id_client' id='id_client')
+                option(selected) Nenhum cliente selecionado
+                each client in list_customers_select
+                  option(value=client.id) #{client.name}
+
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="id_products") Produto
+              select.form-select(id='id_products')
+                option(selected) Nenhum produto selecionado
+                
+                each product in list_products_select
+                  option(id-product=product.id name-product=product.name description-product=product.description value-product=product.value_product) #{product.name}
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="name") Forma de pagamento
+              select.form-select(aria-label="Default select example" name='form_of_payment' )
+                option(value="0" selected) Pagamento
+                option(value="1") Cartão de crédito
+                option(value="2") Pix
+                option(value="3") Boleto
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="name") Data Entrega
+              input.form-control(type="date" id="delivery_date" name="delivery_date" placeholder="Nome")
+
+        // Quando o usuario adicionar um item no select aqui vai criar, as linhas com a informação do pedido, 'COLOCAR GRID EM VEZ DE FLEX', colocar todas as informações nas linhas, criar input hidden para colocar as informações que vão nas linhas e pegar essas informações dinamicamente la na controller, e colocar esse css no arquivo scss 
+        div#table-requests(style='margin-top:5px;margin-bottom:15px')
+          table.table
+            thead          
+              tr
+                th(scope='col') Produto
+                th(scope='col') Descrição
+                th(scope='col') Valor
+                //- th(scope='col') Handle       
+            tbody#div-load-requests            
+
+        div.row
+          div.col-lg-8.mx-auto
+            div.mb-3
+              label.form-label(for="name") Observação
+              textarea.form-control(placeholder="Escreva alguma observação" style="height: 100px" name='comments')
+                
+
+        div.content-btn-add
+          a.btn-arrow-left(href="list_requests")
+            i.fas.fa-arrow-left
+            |  Voltar
+          | &nbsp;&nbsp;&nbsp;
+          a.btn-add(type='button' endpoint='requests/add_requests' type-method='post')
+            i.far.fa-save
+            |  Salvar
+
+          
+          script.
+              
+            new MultiSelectTag('id_products')
+              document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector("#table-requests").style.display = 'none';
+              });

@@ -1,0 +1,53 @@
+/************* Body Start *************/
+* {
+  box-sizing: border-box;
+  // overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: $white;
+  color: $dark;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 10px 0;
+}
+
+#root {
+  padding: 1.5rem;
+}
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical-bar {
+  max-height: calc(100vh - 50px); /* Ajuste a altura máxima conforme necessário */
+  overflow-y: auto; /* Adiciona uma barra de rolagem quando o conteúdo da barra vertical ultrapassa a altura máxima */
+}
+
+#myToast {
+  position: fixed;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.erro-404{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/************* Body End *************/

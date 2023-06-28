@@ -1,0 +1,64 @@
+extends ../layout
+
+block content
+      div.display-flex-row
+        h4=title
+      form(id='form')
+        div.row
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="name") Nome
+              input.form-control(type="text" id="name" name="name" placeholder="Nome")
+
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="email") Email
+              input.form-control(type="email" id="email" name="email" placeholder="Email")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="telephone") Telefone
+              input.form-control(type="text" id="telephone" name="telephone" placeholder="Contato")
+
+          div.col-lg-2
+            div.mb-3
+              div(style="display: flex; align-items: center; justify-content: space-between;")
+                label#label-principal.form-label CPF
+                label.form-label
+                  small#label-small(value="cnpj" style="font-size: 10px; color: #808080; cursor: pointer") CNPJ
+              input.form-control(type="text" id="cpf" name="cpf_cnpj" placeholder="CPF")
+
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="address") Endereço
+              input.form-control(type="text" id="address" name="address" placeholder="Rua exemplo, 999")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="cep") CEP
+              input.form-control(type="text" id="cep" name="cep" placeholder="cep")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="neighborhood") Bairro
+              input.form-control(type="text" id="neighborhood" name="neighborhood" placeholder="Bairro")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="city") Cidade
+              input.form-control(type="text" id="city" name="city" placeholder="Cidade")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="state") Estado
+              input.form-control(type="text" id="state" name="state" placeholder="Estado")
+
+        div.content-btn-add
+          a.btn-arrow-left(href="list_customers")
+            i.fas.fa-arrow-left
+            |  Voltar
+          | &nbsp;&nbsp;&nbsp;
+          a.btn-add(type='button' endpoint='customers/add_client' type-method='post')
+            i.far.fa-save
+            |  Salvar
+

@@ -1,0 +1,32 @@
+/************* Menu Start *************/
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary;
+  color: $white;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  & .menu-itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    & .itens {
+      padding: 0 1rem;
+      font-size: 15px;
+    }
+  }
+
+  & .logo-menu{
+    margin-left: 2rem;
+  }
+
+}
+
+/************* Menu End *************/

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+// body {
+//   background-color: #f4f4f4;
+//   font-family: "Open Sans", sans-serif;
+//   padding: 0;
+//   margin: 0;
+//   font-weight: bold;
+//   line-height: 1.6;
+//   letter-spacing: 0.1rem;
+//   overflow-x: hidden;
+// }
+
+.content-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div-login {
+  background: #fff;
+  width: 300px;
+  height: 350px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.mb-20px {
+  margin-bottom: 15px;
+}
+
+.mb-40px {
+  margin-bottom: 40px;
+}
+.mb-5px {
+  margin-bottom: 5px;
+}
+
+.input-login {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  width: 230px;
+}
+
+.input-login:focus {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #008000;
+  width: 230px;
+}
+
+.btn-login {
+  border: 1px solid #008000;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #008000;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  border: 1px solid #008000;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: #008000;
+  color: #fff;
+  cursor: pointer;
+}

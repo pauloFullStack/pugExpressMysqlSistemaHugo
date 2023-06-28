@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+      div.display-flex-row
+        h4=title
+      form(id='form')
+        div.row
+          div.col-lg-4
+            div.mb-3
+              label.form-label(for="name") Nome
+              input.form-control(type="text" id="name" name="name" placeholder="Nome")
+
+          div.col-lg-6
+            div.mb-3
+              label.form-label(for="description") Descrição
+              input.form-control(type="text" id="description" name="description" placeholder="Descrição produto")
+
+          div.col-lg-2
+            div.mb-3
+              label.form-label(for="value_product") Valor produto
+              input.form-control(type="text" id="value_product" name="value_product" placeholder="Valor do produto")
+              input.form-control(type="hidden" id="quantity" name="quantity" value="1")
+
+        div.content-btn-add
+          a.btn-arrow-left(href="list_products")
+            i.fas.fa-arrow-left
+            |  Voltar
+          | &nbsp;&nbsp;&nbsp;
+          a.btn-add(type='button' endpoint='products/add_products' type-method='post')
+            i.far.fa-save
+            |  Salvar
+

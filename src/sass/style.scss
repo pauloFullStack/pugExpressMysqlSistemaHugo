@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+@import "variables";
+
+@import "body";
+
+@import "menu";
+
+@import "clientes";
+
+@import 'login';
+
+/************* Smartphones Start *************/
+@import "smartphones/smartphone-414";
+/************* Smartphones End *************/
+
+/************* Tablet Start *************/
+@import "tablets/tablet-768";
+/************* Tablet End *************/

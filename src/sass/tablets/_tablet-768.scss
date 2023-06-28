@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  // .grid-container {
+  //   display: grid;
+  //   // auto-fit faz a colunas descer quando o tamanho da tela vai reduzindo, 'efeito responsivo'
+  //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  //   // Espaço entre as colunas
+  //   grid-gap: 0.8rem;
+
+  //   & .item-input {
+  //     padding: 0.6rem 0;
+  //     text-align: center;
+
+  //     input {
+  //       width: 100%;
+  //       padding: 0.7rem;
+  //       border-radius: 5px;
+  //       border: 1px solid #808080;
+  //     }
+
+  //     input:focus {
+  //       width: 100%;
+  //       outline: none;
+  //       border: 1px solid #00ff00;
+  //     }
+
+  //     & .label-input {
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: flex-start;
+  //       margin-bottom: 5px;
+  //       font-size: 13px;
+  //     }
+  //   }
+
+  //   // Ocupa 2 colunas
+  //   & .col-2 {
+  //     grid-column: span 1;
+  //   }
+
+  //   // Ocupa 3 colunas
+  //   & .col-3 {
+  //     grid-column: span 1;
+  //   }
+
+  //   // Ocupa 4 colunas
+  //   & .col-4 {
+  //     grid-column: span 1;
+  //   }
+
+  //   // Ocupa 5 colunas
+  //   & .col-5 {
+  //     grid-column: span 1;
+  //   }
+
+  //   // Ocupa 6 colunas
+  //   & .col-6 {
+  //     grid-column: span 1;
+  //   }
+  // }
+
+  // #myToast {
+  //   position: fixed;
+  //   top: 3rem;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 9999;
+  // }
+}
+
+@media (min-width: 768px) {
+}

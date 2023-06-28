@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+      div.display-flex-row
+        h4 Clientes
+
+      div.content-btn-add
+        a.btn-add(href="form_add_client_view" value="add-clientes")
+          i.fa-solid.fa-plus
+          |  Add Cliente
+
+      input#table-customers(type="hidden" value="load-customer")
+
+      div(style="padding: 20px; box-shadow: 0 1px 2px 0 rgba(65, 69, 73, 0.3), 0 3px 6px 2px rgba(65, 69, 73, 0.15); border-radius: 5px;")
+        div.table-responsive
+          table.table.table-hover
+            thead
+              tr
+                th(scope="col") Data criação
+                th(scope="col") Nome
+                th(scope="col") Telefone
+                th(scope="col") CPF/CNPJ
+                th(scope="col")
+                th(scope="col")
+                th(scope="col")
+            tbody#table-tbody-customers.table-group-divider
+             each client in list_customers
+              tr
+                td #{client.createdAt.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+                td #{client.name}
+                td #{client.telephone}
+                td #{client.cpf_cnpj}
+                td
+                  i(style="color:#008000" class="fas fa-shopping-basket")
+                td
+                  i(style="color:#3131d6" class="fas fa-edit")  
+                td
+                  i(style="color: #f31e1e" class="fas fa-trash")
+

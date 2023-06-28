@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+      div.display-flex-row
+        h4 Produtos
+      
+      div.content-btn-add
+        a.btn-add(href="form_add_product")
+          i.fa-solid.fa-plus
+          |  Add Produto
+
+      input#table-customers(type="hidden" value="load-customer")
+
+      div(style="padding: 20px; box-shadow: 0 1px 2px 0 rgba(65, 69, 73, 0.3), 0 3px 6px 2px rgba(65, 69, 73, 0.15); border-radius: 5px;")
+        div.table-responsive
+          table.table.table-hover
+            thead
+              tr
+                th(scope="col") Código
+                th(scope="col") Nome
+                th(scope="col") Descrição
+                th(scope="col") Valor
+                //- th(scope="col") Quantidade
+                th(scope="col")
+                th(scope="col")
+            tbody#table-tbody-customers.table-group-divider
+             each product in list_products
+              tr
+                //- td #{product.createdAt.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+                td #{product.id}
+                td #{product.name}
+                td #{product.description}
+                td #{product.value_product}
+                //- td #{product.quantity}                  
+                td
+                  i(style="color:#3131d6" class="fas fa-edit")  
+                td
+                  i(style="color: #f31e1e" class="fas fa-trash")
+

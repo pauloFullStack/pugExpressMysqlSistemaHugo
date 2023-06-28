@@ -1,0 +1,127 @@
+/************* Clientes Start *************/
+
+.content-btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+
+  & .btn-add {
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: $primary;
+    border: 1px solid $primary;
+    font-size: 13px;
+  }
+
+  & .btn-add:hover {
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: $white;
+    border: 1px solid transparent;
+    background: $primary;
+    font-size: 13px;
+  }
+
+  & .btn-arrow-left {
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: $dark;
+    border: 1px solid $dark;
+    font-size: 13px;
+  }
+
+  & .btn-arrow-left:hover {
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: $white;
+    border: 1px solid transparent;
+    background: $dark;
+    font-size: 13px;
+  }
+}
+
+/************* Formulario *************/
+
+.display-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin-bottom: 2rem;
+  margin: 4.5rem 0 1.5rem 0;
+}
+
+// .grid-container {
+//   display: grid;
+//   // auto-fit faz a colunas descer quando o tamanho da tela vai reduzindo, 'efeito responsivo'
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//   // Espaço entre as colunas
+//   grid-gap: 0.8rem;
+
+//   & .item-input {
+//     padding: 0.6rem 0;
+//     text-align: center;
+
+//     input {
+//       width: 100%;
+//       padding: 0.7rem;
+//       border-radius: 5px;
+//       border: 1px solid #808080;
+//     }
+
+//     input:focus {
+//       width: 100%;
+//       outline: none;
+//       border: 1px solid #00ff00;
+//     }
+
+//     & .label-input {
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-start;
+//       margin-bottom: 5px;
+//       font-size: 13px;
+//     }
+//   }
+
+//   // Ocupa 2 colunas
+//   & .col-2 {
+//     grid-column: span 2;
+//   }
+
+//   // Ocupa 3 colunas
+//   & .col-3 {
+//     grid-column: span 3;
+//   }
+
+//   // Ocupa 4 colunas
+//   & .col-4 {
+//     grid-column: span 4;
+//   }
+
+//   // Ocupa 5 colunas
+//   & .col-5 {
+//     grid-column: span 5;
+//   }
+
+//   // Ocupa 6 colunas
+//   & .col-6 {
+//     grid-column: span 6;
+//   }
+// }
+
+.grid-container-table {
+  display: grid;
+  // auto-fit faz a colunas descer quando o tamanho da tela vai reduzindo, 'efeito responsivo'
+  grid-template-columns: repeat(3, 1fr);
+  // Espaço entre as colunas
+  grid-gap: 0.8rem;
+
+  & .item {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/************* Clientes End *************/

@@ -1,0 +1,19 @@
+extends layout
+
+block content      
+
+      form(id='form')
+        div.content-flex-row(style="height: 100vh")
+          div.content-flex-column.div-login
+            div.mb-20px
+              h4 Sistema
+            div.mb-40px
+              div.mb-5px
+                label(for="username") Email
+              input.input-login(type="email" id="email" name="email" placeholder="Email")
+            div.mb-40px
+              div.mb-5px
+                label(for="password") Senha
+              input.input-login(type="password" id="password" name="password" placeholder="senha")
+            div
+              a.btn-login#btn-login(type='button' endpoint='login' type-method='post') Login
