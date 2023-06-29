@@ -23,7 +23,6 @@ exports.list_products = asyncHandler(async (req, res, next) => {
   });
 });
 
-
 exports.products_create_post = [
   body([
     "name",

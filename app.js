@@ -1,6 +1,7 @@
 const createError = require("http-errors");
 const express = require("express");
 const session = require("express-session");
+const url = require("url");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
@@ -12,6 +13,7 @@ const customers = require("./routes/customers");
 const loginRoute = require("./routes/login");
 const products = require("./routes/products");
 const requests = require("./routes/requests");
+const register = require("./routes/register");
 // Controller Login
 const login = require("./controllers/login");
 
@@ -46,6 +48,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
+  if(req.url === '/register'){
+    next();
+  }else
   if (!req.session.loggedin && req.method === "POST") {
     return login.check_login(req, res);
   } else if (!req.session.loggedin) {
@@ -55,6 +60,7 @@ app.use((req, res, next) => {
   }
 });
 
+app.use("/register", register);
 app.use("/", indexRouter);
 app.use("/customers", customers);
 app.use("/logout", loginRoute);

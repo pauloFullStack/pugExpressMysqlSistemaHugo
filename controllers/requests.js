@@ -5,7 +5,6 @@ const RequestItem = require("../models/requestItem");
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
-// Criar o insert na tabela requests e request_item, pegar o id gerado em requests, para fazer o insert dos produtos na tabela reqest_item, para criar o relacionamento dos produtos com o pedido, pode haver mais de um produto em um pedido... Criar um multi select, para conseguir adicionar varios produtos em um so pedido la no front...
 exports.form_add_request = asyncHandler(async (req, res, next) => {
   res.render("requests/form_add_request", {
     title: "Adicionar pedido",

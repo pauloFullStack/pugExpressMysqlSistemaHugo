@@ -54,7 +54,6 @@ exports.check_login = asyncHandler(async (req, res, next) => {
   }
 });
 
-
 exports.logout = asyncHandler(async (req, res, next) => {
   req.session.loggedin = false;
   res.redirect("/login")
